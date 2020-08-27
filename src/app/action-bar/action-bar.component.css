@@ -1,0 +1,35 @@
+/*
+Error: Invalid CSS after "... 0.16) !default": expected selector or at-rule, was ".is-tab {"
+        on line 5 of action-bar.component.scss
+
+1: @charset "utf-8";
+2: 
+3: $card-shadow: 0 0.5em 1em -0.125em rgba(#000000, 0.16) !default
+4: 
+5: .is-tab {
+6:   padding: 0.375rem 1rem 0;
+7:   border: 0;
+8: }
+9: .and-title {
+10:   align-items: center;
+
+Backtrace:
+action-bar.component.scss:5
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:42:in `parse'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Ruby27-x64/bin/sass:23:in `load'
+C:/Ruby27-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"... 0.16) !default\": expected selector or at-rule, was \".is-tab {\"\A         on line 5 of action-bar.component.scss\A \A 1: @charset \"utf-8\";\A 2: \A 3: $card-shadow: 0 0.5em 1em -0.125em rgba(#000000, 0.16) !default\A 4: \A 5: .is-tab {\A 6:   padding: 0.375rem 1rem 0;\A 7:   border: 0;\A 8: }\A 9: .and-title {\A 10:   align-items: center;"; }

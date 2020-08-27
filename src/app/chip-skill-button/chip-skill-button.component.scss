@@ -1,0 +1,45 @@
+@charset "utf-8";
+$skill-primary:#3DDC84 !default
+$skill-primary-dark:#23A65D !default
+$card-shadow: 0 0.5em 1em -0.125em rgba(#000000, 0.2), 0 0px 0 1px rgba(#000000, 0.02) !default
+
+#buttons {
+  background-color: white;
+  border-width: 2px;
+  box-shadow: 0 0 0 0.125em #E1E2E4;
+  padding: 2em;
+  margin-bottom: 1.6em;
+  border-radius: 0.5em;
+}
+.buttons {
+  position: relative;
+  display: inline-block;
+}
+
+.skill {
+  border-color: transparent;
+  border-width: 1.2px;
+  box-shadow: 0 0 0 0.125em transparent;
+    &:hover,
+    &.is-hovered{
+      box-shadow: $card-shadow
+    }
+}
+//.skill {
+//  background-color: $skill-primary;
+//  border-color: $skill-primary;
+//  box-shadow: 0 0 0 0.125em transparent;
+//  &:focus,
+//  &.is-focused{
+//    border-color: $skill-primary;
+//    box-shadow: 0 0 0 0.125em $skill-primary-dark;
+//  }
+//  &:hover,
+//  &.is-hovered{
+//    border-color: $skill-primary;
+//  }
+//  &:active,
+//  &.is-active{
+//    border-color: $skill-primary;
+//  }
+//}

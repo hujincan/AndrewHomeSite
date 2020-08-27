@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+#background {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position:center;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-color: white;
+  //background-image: url("../assets/images/wall_backdround.jpg");
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.default-margin {
+  margin-top: 3em;
+}
+
+#skill {
+  margin: 2em;
+}
+
+#project {
+  margin: 2em;
+}

@@ -1,0 +1,21 @@
+<div class="features-box ">
+    <div class="columns">
+        <div class="column features">
+            <p class="mat-h1">👋 你好吖，我是Andrew Martin</p>
+            <br>
+            <p class="text">你好哇，我是Andrew。我在中国是一枚Android粉、以及Material Design爱好者！</p>
+        </div>
+        <div class="column is-narrow icon">
+            <img id="and-icon" src="assets/images/160-160.png" alt="Andrew" width="138" height="138">
+        </div>
+    </div>
+
+    <p class="text">我特别喜欢在网络上探索一些惊艳的应用UI设计，并尝试自己设计那样的UI，通过Android实现效果。实际上我喜欢享受视觉、除了UI、动效之外我还痴迷与摄影、绘画。还有我数学超级糟糕。😢</p>
+
+    <h3 class="mat-h3">您还可以在以下位置找到我：</h3>
+
+    <a matTooltip="{{value.name}}" id="icon" href="{{value.url}}" target="_blank" *ngFor="let value of social">
+        <img src="{{value.icon}}" alt="" width="30" height="30">
+    </a>
+
+</div>

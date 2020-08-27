@@ -1,0 +1,15 @@
+<div id="buttons">
+    <p class="buttons">
+        <button class="button is-rounded skill skill-{{skill.id}}"  id="skill" *ngFor="let skill of skills"
+                [ngStyle]="{
+            'background-color': skill.primary,
+            'border-color': skill.primary}">
+        <span class="icon">
+            <img src="{{skill.icon}}" alt="">
+        </span>
+            <span style="color: {{skill.titleColor}}">
+            {{skill.title}}
+        </span>
+        </button>
+    </p>
+</div>
