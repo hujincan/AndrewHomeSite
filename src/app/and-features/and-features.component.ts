@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Social} from '../data/Social';
+declare var OSS: any;
 
 @Component({
   selector: 'app-and-features',
@@ -14,6 +15,7 @@ export class AndFeaturesComponent implements OnInit {
 
   ngOnInit(): void {
     this.socialList();
+    this.pathColor();
   }
 
   socialList(): void {
@@ -26,4 +28,31 @@ export class AndFeaturesComponent implements OnInit {
     ];
   }
 
+  async pathColor(): Promise<void> {
+
+    const path = await this.asyncCheck(() => document.querySelector('path'));
+    const paths = document.querySelectorAll('path');
+    // tslint:disable-next-line:prefer-for-of
+    const style = document.createElement('style');
+    document.head.appendChild(style);
+    const sheet = style.sheet;
+    // tslint:disable-next-line:prefer-for-of
+    sheet.insertRule('.social-logo:hover path{fill: white;}');
+  }
+
+  asyncCheck = async<T> (getter: () => T, checkSize = 100, timeout = 1000) => {
+    return new Promise<T>(x => {
+      const check = (num = 0) => {
+        const target = getter();
+        if (target !== undefined && target !== null) {
+          x(target);
+        } else if (num > timeout / checkSize) {// 超时
+          x(target);
+        } else {
+          setTimeout(() => check(++num), checkSize);
+        }
+      };
+      check();
+    });
+  }
 }

@@ -1,7 +1,7 @@
 <div class="features-box ">
     <div class="columns">
         <div class="column features">
-            <p class="mat-h1">👋 你好吖，我是Andrew Martin</p>
+            <h3 class="title is-3">👋 你好吖，我是Andrew Martin</h3>
             <br>
             <p class="text">你好哇，我是Andrew。我在中国是一枚Android粉、以及Material Design爱好者！</p>
         </div>
@@ -10,12 +10,18 @@
         </div>
     </div>
 
-    <p class="text">我特别喜欢在网络上探索一些惊艳的应用UI设计，并尝试自己设计那样的UI，通过Android实现效果。实际上我喜欢享受视觉、除了UI、动效之外我还痴迷与摄影、绘画。还有我数学超级糟糕。😢</p>
+    <p class="text">我特别喜欢在网络上探索一些惊艳的应用UI设计，并尝试自己设计那样的UI，通过Android实现效果。实际上我喜欢享受视觉、除了UI、动效之外我还痴迷与摄影、绘画。</p>
+
+    <p class="text">在15岁那年，我在这个不能轻易访问Google的地域中发现了原生Android 7.0预览版的到来。从此就开始了对原生Android系统的热爱。如今我正在努力成为一名全职开发人员。</p>
 
     <h3 class="mat-h3">您还可以在以下位置找到我：</h3>
 
-    <a matTooltip="{{value.name}}" id="icon" href="{{value.url}}" target="_blank" *ngFor="let value of social">
-        <img src="{{value.icon}}" alt="" width="30" height="30">
-    </a>
+    <div class="flex-horizontal">
+        <div class="social-logo-layout" *ngFor="let value of social">
+            <a matTooltip="{{value.name}}" id="icon" href="{{value.url}}" target="_blank">
+                <img class="social-logo" src="{{value.icon}}" onload="SVGInject(this)" alt="{{value.name}}">
+            </a>
+        </div>
+    </div>
 
 </div>

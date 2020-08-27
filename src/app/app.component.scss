@@ -1,27 +1,38 @@
 @charset "utf-8";
 
-#background {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position:center;
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-  background-color: white;
-  //background-image: url("../assets/images/wall_backdround.jpg");
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+//#background {
+//  height: 100%;
+//  width: 100%;
+//  background-size: cover;
+//  background-position:center;
+//  background-attachment:fixed;
+//  background-repeat:no-repeat;
+//  background-color: white;
+//  //background-image: url("../assets/images/wall_backdround.jpg");
+//  margin: 0;
+//  padding: 0;
+//  border: 0;
+//}
 
 .default-margin {
   margin-top: 3em;
 }
 
 #skill {
-  margin: 2em;
+  margin-top: 4em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 #project {
   margin: 2em;
+}
+
+.divider {
+  margin: 4em 2em;
+}
+
+.mat-h2 {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
 }
