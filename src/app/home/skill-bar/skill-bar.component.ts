@@ -1,35 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Skill} from '../../data/Skill';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  // ...
-} from '@angular/animations';
 
 @Component({
   selector: 'app-skill-bar',
-  animations: [
-    trigger('openClose', [
-      // ...
-      state('open', style({
-        opacity: 1,
-        backgroundColor: ``
-      })),
-      state('closed', style({
-        opacity: 0.5,
-        backgroundColor: 'green'
-      })),
-      transition('open => closed', [
-        animate('1s')
-      ]),
-      transition('closed => open', [
-        animate('0.5s')
-      ]),
-    ]),
-  ],
   templateUrl: './skill-bar.component.html',
   styleUrls: ['./skill-bar.component.scss']
 })

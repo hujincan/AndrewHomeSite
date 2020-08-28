@@ -15,3 +15,7 @@ $card-shadow: 0 0.5em 1em -0.125em rgba(#000000, 0.16) !default
 .card {
   box-shadow: $card-shadow;
 }
+
+.navbar-item {
+  cursor:pointer;
+}
