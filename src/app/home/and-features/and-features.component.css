@@ -1,0 +1,40 @@
+#and-icon {
+  margin-right: 6em; }
+
+.features-box {
+  margin-left: 2em;
+  margin-right: 4em;
+  margin-top: 4em; }
+
+.icon {
+  width: 140px;
+  height: 140px;
+  padding: 0;
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-bottom: 1em; }
+
+p {
+  color: #222222; }
+
+span {
+  color: #3A414E; }
+
+.text {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  line-height: 26px; }
+
+.features {
+  padding-bottom: 0;
+  margin-top: 2em; }
+
+.mat-h1 {
+  margin-top: 0.6em; }
+
+.mat-h3 {
+  font-weight: 600;
+  margin-top: 30px;
+  color: #161D2D; }
+
+/*# sourceMappingURL=and-features.component.css.map */

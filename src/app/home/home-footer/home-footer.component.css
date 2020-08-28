@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; }
+
+.has-text-centered {
+  margin-top: 2em; }
+
+/*# sourceMappingURL=home-footer.component.css.map */

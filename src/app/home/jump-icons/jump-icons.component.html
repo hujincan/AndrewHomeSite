@@ -1,0 +1,7 @@
+<div class="flex-horizontal">
+    <div class="social-logo-layout" *ngFor="let value of social">
+        <a matTooltip="{{value.name}}" id="icon" href="{{value.url}}" target="_blank">
+            <img class="social-logo" src="{{value.icon}}" onload="SVGInject(this)" alt="{{value.name}}">
+        </a>
+    </div>
+</div>

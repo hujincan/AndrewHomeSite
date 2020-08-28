@@ -1,0 +1,43 @@
+#icon {
+  margin-right: 1rem; }
+
+.flex-horizontal {
+  display: flex;
+  align-items: center; }
+
+.social-logo-layout {
+  background-color: #eeeeee;
+  width: 40px;
+  height: 40px;
+  margin-right: 1em;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0.125em #E1E2E4;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .social-logo-layout:hover, .social-logo-layout.is-hovered {
+    background-color: #3abb67;
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 0.5em 1em -0.125em rgba(58, 187, 103, 0.4), 0 0px 0 1px rgba(58, 187, 103, 0.02); }
+
+.social-logo-layout::after {
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(58, 187, 103, 0.4);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.social-logo-layout:hover::after {
+  opacity: 1; }
+
+.social-logo {
+  width: 40px;
+  height: 40px;
+  padding: 8px; }
+
+/*# sourceMappingURL=jump-icons.component.css.map */
