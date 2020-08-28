@@ -5,4 +5,5 @@ export interface Skill {
     primary: string;
     primaryDark: string;
     titleColor: string;
+    rating: number;
 }

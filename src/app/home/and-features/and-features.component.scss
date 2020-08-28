@@ -45,3 +45,29 @@ span {
   margin-top: 30px;
   color: #161D2D;
 }
+
+.about_wave__2bBrx{
+  -webkit-animation-name:about_wave-animation__2OiPD;
+  animation-name:about_wave-animation__2OiPD;
+  -webkit-animation-duration:2.5s;
+  animation-duration:2.5s;
+  -webkit-animation-iteration-count:infinite;
+  animation-iteration-count:infinite;
+  transform-origin:70% 70%;
+  display:inline-block
+}
+@-webkit-keyframes about_wave-animation__2OiPD{
+  0%{transform:rotate(0deg)}
+  10%{transform:rotate(-10deg)}
+  20%{transform:rotate(12deg)}
+  30%{transform:rotate(-10deg)}
+  40%{transform:rotate(9deg)}
+  50%{transform:rotate(0deg)}to{transform:rotate(0deg)}
+}
+@keyframes about_wave-animation__2OiPD{0%{transform:rotate(0deg);}
+                                                                                                                                                                                                     10%{transform:rotate(-10deg);}
+                                                                                                                                                                                                     20%{transform:rotate(12deg);}
+                                                                                                                                                                                                     30%{transform:rotate(-10deg);}
+                                                                                                                                                                                                     40%{transform:rotate(9deg);}
+                                                                                                                                                                                                     50%{transform:rotate(0deg);}
+                                                                                                                                                                                                     to{transform:rotate(0deg);}}

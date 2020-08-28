@@ -4,10 +4,13 @@
   border-radius: 0.5em;
   display: flex;
   align-items: center;
+  /* 当属性改变时，浏览器会自动做动画 */
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 #out-progress {
-  width: 100%;
+  width: 70%;
   border-radius: 8px;
   background: linear-gradient(to right, #FFFFFF 70%, rgba(#FFFFFF, 0.4), rgba(#FFFFFF, 0.00));
   height: 16px;
@@ -19,7 +22,7 @@
   height: 100%;
   border-radius: 8px;
   background: rgba(#3DDC84, 0.6);
-  animation:progress 2s 1s ease-in-out infinite alternate;
+  //animation:progress 2s 1s ease-in-out infinite alternate;
 }
 
 @keyframes progress {

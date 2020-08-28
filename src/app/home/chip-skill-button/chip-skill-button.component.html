@@ -1,6 +1,7 @@
 <div id="buttons">
     <p class="buttons">
-        <button class="button is-rounded skill skill-{{skill.id}}"  id="skill" *ngFor="let skill of skills"
+        <button class="button is-rounded skill skill-{{skill.id}}" id="skill" *ngFor="let skill of skills"
+                (click)="selectSkill(skill)"
                 [ngStyle]="{
             'background-color': skill.primary,
             'border-color': skill.primary}">
@@ -13,3 +14,5 @@
         </button>
     </p>
 </div>
+
+<app-skill-bar [skill]="selectedSkill"></app-skill-bar>
