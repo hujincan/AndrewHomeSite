@@ -4,9 +4,9 @@
 
         <div class="navbar-brand">
             <div class="navbar-item">
-                <img src="../../../assets/images/160-160.png" alt="Bulma: a modern CSS framework based on Flexbox" width="36" height="36">
+                <img src="../../assets/images/160-160.png" alt="Bulma: a modern CSS framework based on Flexbox" width="36" height="36">
             </div>
-            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample" (click)="toggleBurger()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -19,20 +19,15 @@
         <div id="navbarExampleTransparentExample" class="navbar-menu">
             <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+                    <div class="navbar-link">
                         关于
-                    </a>
+                    </div>
                     <div class="navbar-dropdown is-boxed">
                         <a class="navbar-item" href="https://bubbble.org">
                             我的故事
                         </a>
-                        <a class="navbar-item" href="https://bubbble.org">
-                            更多？
-                        </a>
+                        <span class="navbar-item" (click)="more()">更多？</span>
                         <hr class="navbar-divider is-active">
-<!--                        <a class="navbar-item is-active" href="https://bubbble.org">-->
-<!--                            一起游戏-->
-<!--                        </a>-->
                         <span class="navbar-item is-active" (click)="openDialog()">一起游戏</span>
                     </div>
                 </div>
@@ -42,10 +37,10 @@
                 <div class="navbar-item is-tab">
                     <div class="tabs">
                         <ul>
-                            <li class="is-active"><a>主页</a></li>
-                            <li><a>博客</a></li>
-                            <li><a>项目</a></li>
-                            <li><a>相册</a></li>
+                            <li class="home is-active" id="home" (click)="selected('#home')"><a routerLink="/home">主页</a></li>
+                            <li class="blog" id="blog"  (click)="selected('#blog')"><a routerLink="/blog">博客</a></li>
+                            <li class="uses" id="uses" (click)="selected('#uses')"><a routerLink="/uses">使用</a></li>
+                            <li class="photos" id="photos" (click)="selected('#photos')"><a routerLink="/photos">相册</a></li>
                         </ul>
                     </div>
                 </div>

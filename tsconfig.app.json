@@ -1,9 +1,12 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+/* "types": ["node"] 会使用Angular预安装的node type 所以可以解决require()报错 */
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [
+      "node"
+    ]
   },
   "files": [
     "src/main.ts",

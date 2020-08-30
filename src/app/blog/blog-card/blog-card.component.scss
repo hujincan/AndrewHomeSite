@@ -1,0 +1,166 @@
+.mat-h4 {
+  margin: 0.8rem;
+  color: #161D2D;
+}
+
+.mat-h2 {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+}
+
+.date {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.2rem;
+  color: #161D2D;
+  font-size: 16px;
+}
+.content {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  padding-bottom: 1rem;
+  color: #161D2D;
+  font-size: 16px;
+}
+
+#image-layout {
+  height: 14em;
+  width: 100%;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  border-radius: 0.5em 0.5em 0 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.item {
+  position: relative;
+  background-color: white;
+  border-radius: 0.5em;
+  width: 100%;
+  height: auto;
+  margin: 1em;
+  box-shadow: 0 0 0 0.08em #E1E2E4;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.item::after {
+  content: ""; // 不知道为什么删掉这个就没阴影了
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.item:hover {
+  box-shadow: 0 0 0 0 #E1E2E4;
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1, 1);
+}
+
+.item:hover::after {
+  opacity: 1;
+}
+
+.boox {
+  color: #333;
+  height: auto;
+}
+
+/* 瀑布流、瀑布流 */
+.is-ancestor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; // 分为3列
+  grid-template-rows: auto;
+  column-gap: 1em; // 列间距5px
+}
+
+@media screen and (max-width: 800px) {
+  .is-ancestor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // 分为3列
+    column-gap: 1em; // 列间距5px
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .is-ancestor {
+    display: grid;
+    grid-template-columns: 1fr; // 分为3列
+    column-gap: 1em; // 列间距5px
+  }
+}
+
+//.is-ancestor {
+//  display: flex;
+//  flex-flow: column wrap;
+//  align-content: space-between;
+//  width: 100%;
+//  /* 容器必须有固定高度
+//  * 且高度大于最高的列高 */
+//  height: 700px;
+//}
+//
+//.boox {
+//  width: 32%;
+//}
+//
+///* 将内容块重排为3列 */
+//.boox:nth-child(3n+1) { order: 1; }
+//.boox:nth-child(3n+2) { order: 2; }
+//.boox:nth-child(3n)   { order: 3; }
+//
+///* 强制换列 */
+//.is-ancestor::before,
+//.is-ancestor::after {
+//  content: "";
+//  flex-basis: 100%;
+//  width: 0;
+//  order: 2;
+//}
+//
+//@media screen and (max-width: 1000px) {
+//  .is-ancestor {
+//    display: flex;
+//  }
+//  .boox:nth-child(3n+1) { order: 1; }
+//  .boox:nth-child(3n+2) { order: 2; }
+//  .boox:nth-child(3n)   { order: 3; }
+//  .boox {
+//    width: 32%;
+//  }
+//}
+//@media screen and (max-width: 800px) {
+//  .is-ancestor {
+//    display: flex;
+//  }
+//  .boox:nth-child(2n+1) { order: 1; }
+//  .boox:nth-child(2n)   { order: 2; }
+//  .boox {
+//    width: 48%;
+//  }
+//}
+//
+//@media screen and (max-width: 600px) {
+//  .is-ancestor {
+//    display: block;
+//    //flex: none
+//  }
+//  .boox:nth-child(1n)   { order: 1; }
+//  .boox {
+//    width: 100%;
+//  }
+//}

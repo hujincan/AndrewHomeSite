@@ -2,13 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ActionBarComponent, ActionBarDialogComponent } from './home/action-bar/action-bar.component';
+import { ActionBarComponent, ActionBarDialogComponent } from './action-bar/action-bar.component';
 import { ChipSkillButtonComponent } from './home/chip-skill-button/chip-skill-button.component';
 import { AndFeaturesComponent } from './home/and-features/and-features.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillBarComponent } from './home/skill-bar/skill-bar.component';
 import { ProjectTilesComponent } from './home/project-tiles/project-tiles.component';
-import { HomeFooterComponent } from './home/home-footer/home-footer.component';
+import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { JumpIconsComponent } from './home/jump-icons/jump-icons.component';
 
 import {A11yModule} from '@angular/cdk/a11y';
@@ -54,6 +54,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home/home.component';
+import { BlogComponent } from './blog/blog/blog.component';
+import { UsesComponent } from './uses/uses/uses.component';
+import { PhotosComponent } from './photos/photos/photos.component';
+import { MdPageComponent } from './blog/md/md-page/md-page.component';
+import { BlogCardComponent } from './blog/blog-card/blog-card.component';
+import { AppPipe } from './app.pipe';
 
 @NgModule({
     exports: [
@@ -112,7 +120,14 @@ import {OverlayModule} from '@angular/cdk/overlay';
         ProjectTilesComponent,
         HomeFooterComponent,
         JumpIconsComponent,
-        ActionBarDialogComponent
+        ActionBarDialogComponent,
+        HomeComponent,
+        BlogComponent,
+        UsesComponent,
+        PhotosComponent,
+        MdPageComponent,
+        BlogCardComponent,
+        AppPipe
     ],
     imports: [
         BrowserModule,
@@ -120,6 +135,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
         MatButtonModule,
         MatTooltipModule,
         MatDividerModule,
+        AppRoutingModule,
     ],
     entryComponents: [ActionBarComponent, ActionBarDialogComponent],
   providers: [],

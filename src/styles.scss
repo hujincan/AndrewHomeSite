@@ -15,12 +15,10 @@ $fullhd: 1024px;
 
 @import "../node_modules/bulma/bulma.sass";
 
-html,body{
-  height: 100%;
-}
+//html,body{
+//  height: 100%;
+//}
 body{
   margin: 0;
 }
-
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -9,9 +9,12 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class ActionBarComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private snackBar: MatSnackBar) { }
+
+  tabs: string[] = ['#home', '#blog', '#uses', '#photos'];
 
   ngOnInit(): void {
+    this.setupSelected();
   }
 
   openDialog(): void {
@@ -19,6 +22,61 @@ export class ActionBarComponent implements OnInit {
       maxWidth: 600,
       autoFocus: false
     });
+  }
+
+  more(): void {
+    this.openSnackBar('没有更多了😌', '好吧');
+  }
+
+  openSnackBar(message: string, action: string): void {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
+  selected(id: string): void {
+    for (const idName of this.tabs) {
+      const ele = document.querySelector(idName);
+      this.removeClass(ele, 'is-active');
+      if (id === idName) {
+        this.addClass(ele, 'is-active');
+      }
+    }
+  }
+
+  setupSelected(): void {
+    const url = window.location.pathname;
+    if (!(url.indexOf('blog') === -1)) {
+      this.selected('#blog');
+    }
+  }
+
+  toggleClass(ele, cls): void {
+    if (this.hasClass(ele, cls)) {
+      this.removeClass(ele, cls);
+    } else {
+      this.addClass(ele, cls);
+    }
+  }
+
+  hasClass(ele, cls): boolean {
+    return ele.className.match(new RegExp('\\s|^' + cls + '(\\s|$)'));
+  }
+  private addClass(ele, cls): void {
+    if (!this.hasClass(ele, cls)) {
+      ele.className += ' ' + cls;
+    }
+  }
+  private removeClass(ele, cls): void {
+    if (this.hasClass(ele, cls)) {
+      const reg = RegExp('(\\s|^)' + cls + '(\\s|$)');
+      ele.className = ele.className.replace(reg, '');
+    }
+  }
+
+  toggleBurger(): void {
+    this.toggleClass(document.querySelector('.navbar-burger'), 'is-active');
+    this.toggleClass(document.querySelector('.navbar-menu'), 'is-active');
   }
 }
 
@@ -48,7 +106,6 @@ export class ActionBarDialogComponent {
     document.body.removeChild(input);
     this.openSnackBar('已复制到剪贴板', '好的');
   }
-
 
   openSnackBar(message: string, action: string): void {
     this.snackBar.open(message, action, {
