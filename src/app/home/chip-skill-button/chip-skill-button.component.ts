@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Skill} from '../../data/Skill';
+import {Skill} from '../../data/skill';
 
 @Component({
   selector: 'app-chip-skill-button',

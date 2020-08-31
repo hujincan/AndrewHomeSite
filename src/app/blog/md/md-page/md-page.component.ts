@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {MARKDOWNS} from '../../../data/markdowns';
 
 @Component({
   selector: 'app-md-page',
@@ -9,15 +11,26 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class MdPageComponent implements OnInit {
 
-  constructor() { }
+  markdowns = MARKDOWNS;
+
+  constructor(private route: ActivatedRoute) { }
 
   content: string;
 
   ngOnInit(): void {
-    this.initMarkdown();
+    this.getId();
   }
 
-  initMarkdown(): void {
+  getId(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    if (id === -1) {
+      this.initMarkdown('../../../../../assets/markdown/Uses.md');
+    } else {
+      this.initMarkdown(this.markdowns[id].url);
+    }
+  }
+
+  initMarkdown(url): void {
     const md = require('markdown-it')({
       html: true,
       linkify: true,
@@ -31,7 +44,7 @@ export class MdPageComponent implements OnInit {
       console.log('浏览器不支持');
     }
     if (xmlhttp != null) {
-      xmlhttp.open('get', '../../../../../assets/markdown/学习观的运用.md', true);
+      xmlhttp.open('get', url, true);
       xmlhttp.send();
       xmlhttp.onreadystatechange = () => {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {

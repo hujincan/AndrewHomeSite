@@ -1,4 +1,4 @@
-<div class="root mat-typography">
+<div class="root">
     <h2 class="mat-h2">🚀 博客</h2>
     <div class="is-ancestor root">
         <a *ngFor="let md of markdowns" class="boox blog-link" href="/blog/md-page/{{md.id}}">
@@ -6,7 +6,7 @@
                 <div id="image-layout" style="background-image: url('{{md.image}}');"></div>
                 <h3 class="title is-4 mat-h4">{{md.title}}</h3>
                 <p class="date">{{md.date}}</p>
-                <p class="content">{{md.content}}</p>
+                <p *ngIf="md.content" class="content">{{md.content}}</p>
             </div>
         </a>
     </div>

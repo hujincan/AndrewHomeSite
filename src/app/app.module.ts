@@ -38,8 +38,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
@@ -57,11 +55,11 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home/home.component';
 import { BlogComponent } from './blog/blog/blog.component';
-import { UsesComponent } from './uses/uses/uses.component';
 import { PhotosComponent } from './photos/photos/photos.component';
 import { MdPageComponent } from './blog/md/md-page/md-page.component';
 import { BlogCardComponent } from './blog/blog-card/blog-card.component';
 import { AppPipe } from './app.pipe';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
     exports: [
@@ -90,8 +88,6 @@ import { AppPipe } from './app.pipe';
         MatListModule,
         MatMenuModule,
         MatNativeDateModule,
-        MatPaginatorModule,
-        MatProgressBarModule,
         MatProgressSpinnerModule,
         MatRadioModule,
         MatRippleModule,
@@ -116,14 +112,12 @@ import { AppPipe } from './app.pipe';
         ChipSkillButtonComponent,
         AndFeaturesComponent,
         SkillBarComponent,
-        AndFeaturesComponent,
         ProjectTilesComponent,
         HomeFooterComponent,
         JumpIconsComponent,
         ActionBarDialogComponent,
         HomeComponent,
         BlogComponent,
-        UsesComponent,
         PhotosComponent,
         MdPageComponent,
         BlogCardComponent,
@@ -136,8 +130,12 @@ import { AppPipe } from './app.pipe';
         MatTooltipModule,
         MatDividerModule,
         AppRoutingModule,
+        MatProgressBarModule,
     ],
-    entryComponents: [ActionBarComponent, ActionBarDialogComponent],
+    entryComponents: [
+        ActionBarComponent,
+        ActionBarDialogComponent
+    ],
   providers: [],
     bootstrap: [AppComponent, ActionBarComponent]
 })

@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'sans';
+  src: url('../../../assets/fonts/sans.ttf') format('truetype');
+}
+
+.root {
+  font-family: "sans";
+}
+
 .mat-h4 {
-  margin: 0.8rem;
+  margin: 1.4rem 1.2rem 0.8rem 1.2rem;
   color: #161D2D;
+  line-height:26px;
 }
 
 .mat-h2 {
@@ -9,18 +19,18 @@
 }
 
 .date {
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  margin-bottom: 0.2rem;
-  color: #161D2D;
-  font-size: 16px;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #3A414E;
+  font-size: 15px;
 }
 .content {
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  padding-bottom: 1rem;
-  color: #161D2D;
-  font-size: 16px;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  color: #3A414E;
+  font-size: 15px;
+  line-height:22px;
 }
 
 #image-layout {
@@ -44,6 +54,7 @@
   border-radius: 0.5em;
   width: 100%;
   height: auto;
+  padding-bottom: 1.2rem;
   margin: 1em;
   box-shadow: 0 0 0 0.08em #E1E2E4;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);

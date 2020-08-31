@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Project} from '../../data/Project';
+import {Project} from '../../data/project';
 
 @Component({
   selector: 'app-project-tiles',

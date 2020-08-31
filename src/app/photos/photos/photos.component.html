@@ -1,1 +1,19 @@
-<p>photos works!</p>
+<div class="root">
+
+    <div class="content">
+        <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+        <h2 class="mat-h2">📸 相册</h2>
+        <div ng-controller="ImageLayout">
+            <section id="img_wrap">
+                <div class="img_x" *ngFor="let photo of photos" (click)="clickPhoto(photo)">
+                    <i></i><img src="{{photo.url}}" />
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="dialog" *ngIf="photo" (click)="clearPhoto()">
+        <img src="{{photo.url}}" alt="{{photo.description}}">
+    </div>
+
+</div>

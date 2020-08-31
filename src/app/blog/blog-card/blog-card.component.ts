@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Markdown} from '../../data/Markdown';
+import {Markdown} from '../../data/markdown';
+import {MARKDOWNS} from '../../data/markdowns';
 
 @Component({
   selector: 'app-blog-card',
@@ -8,24 +9,10 @@ import {Markdown} from '../../data/Markdown';
 })
 export class BlogCardComponent implements OnInit {
 
-  markdowns: Markdown[];
+  markdowns = MARKDOWNS;
   constructor() { }
 
   ngOnInit(): void {
-    this.getMarkdowns();
-  }
-
-  getMarkdowns(): void {
-    this.markdowns = [
-      { id: 0, image: '../../../assets/images/blog-image.jpg', title: 'BlogTitle', content: 'Get to know the software and hardware I use',
-        date: '2020.8.30-15.54'},
-      { id: 1, image: '../../../assets/images/blog-image.jpg', title: 'BlogTitle', content: 'Get to know the software and hardware I use',
-        date: '2020.8.30-15.54'},
-      { id: 2, image: '../../../assets/images/blog-image.jpg', title: 'BlogTitle', content: 'Get to know the software and hardware I use',
-        date: '2020.8.30-15.54'},
-      { id: 3, image: '../../../assets/images/blog-image.jpg', title: 'BlogTitle', content: 'Get to know the software and hardware I use',
-        date: '2020.8.30-15.54'},
-    ];
   }
 
 }

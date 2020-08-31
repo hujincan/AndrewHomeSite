@@ -23,4 +23,7 @@ $card-shadow: 0 0.5em 1em -0.125em rgba(#000000, 0.16) !default
 .home, .blog, .uses, .photos {
   margin: 0;
   padding: 0;
+  &::before {
+    content: none;
+  }
 }
