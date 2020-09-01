@@ -3,7 +3,7 @@
 
 .features-box {
   margin-left: 2em;
-  margin-right: 4em;
+  margin-right: 2em;
   margin-top: 4em; }
 
 .icon {
@@ -19,6 +19,9 @@ p {
 
 span {
   color: #3A414E; }
+
+.title {
+  line-height: 36px; }
 
 .text {
   font-size: 1.2em;

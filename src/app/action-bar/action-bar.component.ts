@@ -46,7 +46,7 @@ export class ActionBarComponent implements OnInit {
 
   setupSelected(): void {
     const url = window.location.pathname;
-    if (!(url.indexOf('/blog/md-page/0') === -1)) {
+    if (!(url.indexOf('/blog/md-page/-1') === -1)) {
       this.selected('#uses');
     } else if (!(url.indexOf('blog') === -1)) {
       this.selected('#blog');

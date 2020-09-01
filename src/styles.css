@@ -3349,7 +3349,7 @@ button.dropdown-item {
   padding: 20px; }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
@@ -3969,7 +3969,7 @@ a.navbar-item,
     display: none; }
 
   .navbar-menu {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0; }
     .navbar-menu.is-active {

@@ -13,7 +13,8 @@
     </div>
 
     <div class="dialog" *ngIf="photo" (click)="clearPhoto()">
-        <img src="{{photo.url}}" alt="{{photo.description}}">
+        <img class="preview" src="{{photo.url}}" alt="{{photo.description}}">
+        <p class="description">{{photo.description}}</p>
     </div>
 
 </div>

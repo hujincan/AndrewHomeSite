@@ -1,8 +1,8 @@
 <div class="tile is-ancestor">
 
-    <a *ngFor="let project of projects" class="tile project-link" href="{{project.url}}">
+    <a *ngFor="let project of projects" class="tile project-link" href="{{project.url}}" target="_blank">
         <div class="item">
-            <img class="project-icon" src="{{project.icon}}" alt="ProjectIcon" width="60" height="60">
+            <img class="project-icon" src="{{project.icon}}" alt="ProjectIcon">
             <div class="text-layout">
                 <h2 class="mat-h2">{{project.name}}</h2>
                 <p class="description">{{project.content}}</p>

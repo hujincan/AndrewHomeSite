@@ -25,6 +25,7 @@
   color: #3A414E;
   font-size: 15px;
 }
+
 .content {
   margin-left: 1.2rem;
   margin-right: 1.2rem;
@@ -55,7 +56,7 @@
   width: 100%;
   height: auto;
   padding-bottom: 1.2rem;
-  margin: 1em;
+  margin-bottom: 1em;
   box-shadow: 0 0 0 0.08em #E1E2E4;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -99,10 +100,10 @@
   column-gap: 1em; // 列间距5px
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .is-ancestor {
     display: grid;
-    grid-template-columns: 1fr 1fr; // 分为3列
+    grid-template-columns: 1fr 1fr; // 分为2列
     column-gap: 1em; // 列间距5px
   }
 }
@@ -110,7 +111,7 @@
 @media screen and (max-width: 600px) {
   .is-ancestor {
     display: grid;
-    grid-template-columns: 1fr; // 分为3列
+    grid-template-columns: 1fr; // 分为1列
     column-gap: 1em; // 列间距5px
   }
 }

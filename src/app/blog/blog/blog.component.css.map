@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,KAAM;EACJ,MAAM,EAAE,WAAW",
+"mappings": "AAAA,KAAM;EACJ,MAAM,EAAE,eAAe",
 "sources": ["blog.component.scss"],
 "names": [],
 "file": "blog.component.css"
