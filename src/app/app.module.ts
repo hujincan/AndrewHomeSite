@@ -60,6 +60,7 @@ import { MdPageComponent } from './blog/md/md-page/md-page.component';
 import { BlogCardComponent } from './blog/blog-card/blog-card.component';
 import { AppPipe } from './app.pipe';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
     exports: [
@@ -136,7 +137,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
         ActionBarComponent,
         ActionBarDialogComponent
     ],
-  providers: [],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent, ActionBarComponent]
 })
 export class AppModule { }
